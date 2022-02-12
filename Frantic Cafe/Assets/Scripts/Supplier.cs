@@ -2,23 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum ItemType
+{
+    InstantToastMix
+}
+
 public class Supplier : Interactable
 {
     [SerializeField]
-    Item item;
+    ItemType item;
 
     public override string GetTitle()
     {
-        return "Instant Toast Mix Box";
+        switch (item)
+        {
+            case ItemType.InstantToastMix:
+                return "Instant Toast Mix Box";
+            default:
+                return "hmm?";
+        }
     }
 
     public override string GetDescription()
     {
-        return "Take 1x [Instant Toast Mix]";
+        switch (item)
+        {
+            case ItemType.InstantToastMix:
+                return "Take 1x Instant Toast Mix";
+            default:
+                return "hmm?";
+        }
     }
 
     public override void Interact()
     {
-        PlayerInventory.Instance.ChangeHand(new InstantToastMix());
+        switch (item)
+        {
+            case ItemType.InstantToastMix:
+                PlayerInventory.Instance.ChangeHand(new InstantToastMix());
+                break;
+        }
     }
 }

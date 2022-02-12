@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class TrashCan : Interactable
 {
-    [SerializeField]
-    Item item;
-
     public override string GetTitle()
     {
         return "Trash Can";

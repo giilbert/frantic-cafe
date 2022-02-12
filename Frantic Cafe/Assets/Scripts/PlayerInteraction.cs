@@ -31,8 +31,16 @@ public class PlayerInteraction : MonoBehaviour
             // interactable.ShowOutline();
 
             // hides the text
+            string title = interactable.GetTitle();
+
+            if (title == null)
+            {
+                interactionUI.localScale = Vector3.zero;
+                return;
+            }
+
             interactionUI.localScale = Vector3.one;
-            interactionTitle.text = interactable.GetTitle();
+            interactionTitle.text = title;
             interactionDescription.text = interactable.GetDescription();
 
             if (Input.GetMouseButtonDown(0)) HandleInteraction(interactable);
