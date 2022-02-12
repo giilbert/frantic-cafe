@@ -2,22 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Thing : Interactable
+public class Supplier : Interactable
 {
     InteractionType interactionType = InteractionType.Click;
 
+    public Item item;
+
     public override string GetTitle()
     {
-        return "title";
+        return "Instant Toast Mix Box";
     }
 
     public override string GetDescription()
     {
-        return "asdsadasd";
+        return "Take 1x [Instant Toast Mix]";
     }
 
     public override void Interact()
     {
-        Debug.Log("Interact!");
+        Debug.Log("bread supplier");
     }
 }

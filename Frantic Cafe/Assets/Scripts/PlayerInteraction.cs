@@ -5,7 +5,9 @@ public class PlayerInteraction : MonoBehaviour
 {
     public float interactionDistance;
     public Camera cam;
-    public TMP_Text interactionText;
+    public TMP_Text interactionTitle;
+    public TMP_Text interactionDescription;
+    public RectTransform interactionUI;
 
     void Update()
     {
@@ -18,7 +20,7 @@ public class PlayerInteraction : MonoBehaviour
 
             if (interactable == null)
             {
-                interactionText.gameObject.transform.localScale = Vector3.zero;
+                interactionUI.localScale = Vector3.zero;
                 return;
             }
 
@@ -26,19 +28,19 @@ public class PlayerInteraction : MonoBehaviour
             // test for distance
             if (Vector3.Distance(transform.position, hit.collider.transform.position) > interactionDistance) return;
 
-            interactable.ShowOutline();
+            // interactable.ShowOutline();
 
             // hides the text
-            interactionText.gameObject.transform.localScale = Vector3.one;
-
-            interactionText.text = interactable.GetDescription();
+            interactionUI.localScale = Vector3.one;
+            interactionTitle.text = interactable.GetTitle();
+            interactionDescription.text = interactable.GetDescription();
 
             if (Input.GetMouseButtonDown(0)) HandleInteraction(interactable);
         }
         else
         {
             // shows the text
-            interactionText.gameObject.transform.localScale = Vector3.zero;
+            interactionUI.localScale = Vector3.zero;
         }
     }
 

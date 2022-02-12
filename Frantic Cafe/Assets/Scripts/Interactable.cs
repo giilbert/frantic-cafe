@@ -1,5 +1,4 @@
 using UnityEngine;
-using cakeslice;
 
 public abstract class Interactable : MonoBehaviour
 {
@@ -11,20 +10,12 @@ public abstract class Interactable : MonoBehaviour
 
     public InteractionType type;
 
-    Outline outline;
-    void Start()
-    {
-        outline = GetComponent<Outline>();
-        outline.OnDisable();
-    }
-
     bool isHidden = true;
     public void HideOutline()
     {
         if (!isHidden)
         {
-            outline.OnDisable();
-            isHidden = true;
+            // TODO: maybe?
         }
     }
 
@@ -32,8 +23,7 @@ public abstract class Interactable : MonoBehaviour
     {
         if (isHidden)
         {
-            outline.OnEnable();
-            isHidden = false;
+            // TODO: maybe?
         }
     }
 
@@ -42,6 +32,7 @@ public abstract class Interactable : MonoBehaviour
         HideOutline();
     }
 
+    public abstract string GetTitle();
     public abstract string GetDescription();
     public abstract void Interact();
 }
