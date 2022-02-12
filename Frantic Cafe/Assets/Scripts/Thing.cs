@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Thing : Interactable
 {
-    InteractionType interactionType = InteractionType.Click;
 
     public override string GetTitle()
     {

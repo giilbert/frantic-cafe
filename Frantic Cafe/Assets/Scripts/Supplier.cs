@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Supplier : Interactable
 {
-    InteractionType interactionType = InteractionType.Click;
-
-    public Item item;
+    [SerializeField]
+    Item item;
 
     public override string GetTitle()
     {
@@ -20,6 +19,6 @@ public class Supplier : Interactable
 
     public override void Interact()
     {
-        Debug.Log("bread supplier");
+        PlayerInventory.Instance.ChangeHand(new InstantToastMix());
     }
 }

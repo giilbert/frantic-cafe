@@ -2,14 +2,6 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    public enum InteractionType
-    {
-        Click,
-        Hold
-    }
-
-    public InteractionType type;
-
     bool isHidden = true;
     public void HideOutline()
     {

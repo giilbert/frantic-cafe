@@ -46,6 +46,6 @@ public class PlayerInteraction : MonoBehaviour
 
     void HandleInteraction(Interactable interactable)
     {
-        Debug.Log("Interactable!");
+        interactable.Interact();
     }
 }
