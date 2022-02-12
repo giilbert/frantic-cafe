@@ -18,9 +18,13 @@ public class PlayerInteraction : MonoBehaviour
 
             if (interactable == null)
             {
-                interactionText.gameObject.SetActive(false);
+                interactionText.gameObject.transform.localScale = Vector3.zero;
                 return;
             }
+
+
+            // test for distance
+            if (Vector3.Distance(transform.position, hit.collider.transform.position) > interactionDistance) return;
 
             interactable.ShowOutline();
 
@@ -28,9 +32,6 @@ public class PlayerInteraction : MonoBehaviour
             interactionText.gameObject.transform.localScale = Vector3.one;
 
             interactionText.text = interactable.GetDescription();
-
-            // test for distance
-            if (Vector3.Distance(transform.position, hit.collider.transform.position) > interactionDistance) return;
 
             if (Input.GetMouseButtonDown(0)) HandleInteraction(interactable);
         }
