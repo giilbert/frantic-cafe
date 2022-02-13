@@ -9,6 +9,13 @@ public class PlayerInteraction : MonoBehaviour
     public TMP_Text interactionDescription;
     public RectTransform interactionUI;
 
+    AudioSource blipSound;
+
+    void Start()
+    {
+        blipSound = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), -Vector3.forward);
@@ -54,6 +61,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void HandleInteraction(Interactable interactable)
     {
+        blipSound.Play();
         interactable.Interact();
     }
 }
