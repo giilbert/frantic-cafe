@@ -23,7 +23,7 @@ public class Supplier : Interactable
             case ItemType.Glass:
                 return "Glass";
             case ItemType.CoffeeGrounds:
-                return "Coffe Grounds";
+                return "Coffee Grounds";
             default:
                 return "hmm?";
         }
