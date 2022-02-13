@@ -10,7 +10,7 @@ public class PlayerInventory : MonoBehaviour
     public Item currentHand;
 
     // changes the item in the player's hand
-    public void ChangeHand(Item item)
+    public void ChangeHand(Item item, bool replace = false)
     {
         // empty hand
         if (item == null)
@@ -20,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
             return;
         }
 
-        if (currentHand != null)
+        if (currentHand != null && !replace)
         {
             ToastMessage.Instance.Display("Your hands are full!");
             return;

@@ -59,6 +59,9 @@ public class Customer : Interactable
     };
     static Item[] possibleOrders = {
         new Toast(),
+        new ToastWithPeanutJam(),
+        new ToastWithStrawberryJam(),
+        new ToastWithPeanutAndStrawberryJam()
     };
     int numOfCustomerSkins = 5;
 
@@ -83,6 +86,7 @@ public class Customer : Interactable
         customerName = GetRandomName();
         currentOrder = GetRandomOrder();
         ChangeSkin();
+        UpdateUIBubble();
 
         StartCoroutine(TickDown());
     }
@@ -183,6 +187,7 @@ public class Customer : Interactable
         }
 
         currentOrder = GetRandomOrder();
+        timeLeft = patience;
         UpdateUIBubble();
     }
 

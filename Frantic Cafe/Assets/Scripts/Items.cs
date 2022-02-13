@@ -4,7 +4,10 @@ public enum Items
 {
     InstantToastMix,
     Toast,
-    Charcoal
+    Charcoal,
+    ToastWithPeanutJam,
+    ToastWithStrawberryJam,
+    ToastWithPeanutAndStrawberryJam
 }
 
 public abstract class Item
@@ -33,4 +36,25 @@ public class Charcoal : Item
     public override Items GetId() { return Items.Charcoal; }
     public override string GetName() { return "Charcoal"; }
     public override string GetResourceName() { return "charcoal"; }
+}
+
+public class ToastWithPeanutJam : Item
+{
+    public override Items GetId() { return Items.ToastWithPeanutJam; }
+    public override string GetName() { return "Toast With Peanut Jam"; }
+    public override string GetResourceName() { return "toastwithpeanutjam"; }
+}
+
+public class ToastWithStrawberryJam : Item
+{
+    public override Items GetId() { return Items.ToastWithStrawberryJam; }
+    public override string GetName() { return "Toast With Strawberry Jam"; }
+    public override string GetResourceName() { return "toastwithstrawberryjam"; }
+}
+
+public class ToastWithPeanutAndStrawberryJam : Item
+{
+    public override Items GetId() { return Items.ToastWithPeanutAndStrawberryJam; }
+    public override string GetName() { return "Toast With Peanut and Strawberry Jam"; }
+    public override string GetResourceName() { return "toastwithpeanutandstrawberryjam"; }
 }
