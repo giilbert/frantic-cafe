@@ -6629,9 +6629,14 @@ MonoBehaviour:
     -
     Customers will not take food that is not theirs
 
+    - Customers leaving will
+    cause you to lose money
 
-    Your shift only lasts 5
-    minutes! Try to earn as much money as possible!'
+    - Throwing away things will also cause you to lose
+    money
+
+
+    Your shift only lasts 5 minutes! Try to earn as much money as possible!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7faa52fffc0180a46afbc4375353d987, type: 2}
   m_sharedMaterial: {fileID: -5297892046072241396, guid: 7faa52fffc0180a46afbc4375353d987, type: 2}

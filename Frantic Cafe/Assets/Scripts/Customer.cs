@@ -202,6 +202,19 @@ public class Customer : Interactable
             timeLeft -= 1;
             UpdateTimer();
         }
+
+        spriteRenderer.sprite = null;
+        customerName = null;
+        MoneyScore.Instance.IncreaseScore(-5);
+        yield return new WaitForSeconds(5);
+
+        currentOrder = GetRandomOrder();
+        customerName = GetRandomName();
+        timeLeft = patience;
+        ChangeSkin();
+        UpdateUIBubble();
+        UpdateTimer();
+        StartCoroutine(TickDown());
     }
 
     void UpdateTimer()
