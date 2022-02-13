@@ -37,6 +37,8 @@ public class Supplier : Interactable
                 return "Take 1x Instant Toast Mix";
             case ItemType.Glass:
                 return "Take 1x Glass";
+            case ItemType.CoffeeGrounds:
+                return "Take 1x Coffee Grounds";
             default:
                 return "hmm?";
         }

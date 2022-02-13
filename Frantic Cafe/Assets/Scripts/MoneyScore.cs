@@ -8,7 +8,7 @@ public class MoneyScore : MonoBehaviour
     TMP_Text text;
     public static MoneyScore Instance { get; private set; }
 
-    float currentScore = 0f;
+    public static float currentScore = 0f;
 
     public void IncreaseScore(float x)
     {
