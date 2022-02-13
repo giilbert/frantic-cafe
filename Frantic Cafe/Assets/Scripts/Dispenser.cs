@@ -21,7 +21,7 @@ public class Dispenser : Interactable
     {
         if (PlayerInventory.Instance.currentHand == null) return null;
 
-        return GetDispensee() + " Dispenser";
+        return "Jar of " + GetDispensee();
     }
 
     public override string GetDescription()

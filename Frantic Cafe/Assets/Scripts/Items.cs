@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public enum Items
 {
     InstantToastMix,
@@ -7,7 +5,9 @@ public enum Items
     Charcoal,
     ToastWithPeanutJam,
     ToastWithStrawberryJam,
-    ToastWithPeanutAndStrawberryJam
+    ToastWithPeanutAndStrawberryJam,
+    Glass,
+    GlassOfWater
 }
 
 public abstract class Item
@@ -57,4 +57,18 @@ public class ToastWithPeanutAndStrawberryJam : Item
     public override Items GetId() { return Items.ToastWithPeanutAndStrawberryJam; }
     public override string GetName() { return "Toast With Peanut and Strawberry Jam"; }
     public override string GetResourceName() { return "toastwithpeanutandstrawberryjam"; }
+}
+
+public class Glass : Item
+{
+    public override Items GetId() { return Items.Glass; }
+    public override string GetName() { return "Glass"; }
+    public override string GetResourceName() { return "glass"; }
+}
+
+public class GlassOfWater : Item
+{
+    public override Items GetId() { return Items.GlassOfWater; }
+    public override string GetName() { return "Glass Of Water"; }
+    public override string GetResourceName() { return "glassofwater"; }
 }
