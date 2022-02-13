@@ -62,7 +62,8 @@ public class Customer : Interactable
         new ToastWithPeanutJam(),
         new ToastWithStrawberryJam(),
         new ToastWithPeanutAndStrawberryJam(),
-        new GlassOfWater()
+        new GlassOfWater(),
+        new GlassOfCoffee()
     };
     int numOfCustomerSkins = 5;
 

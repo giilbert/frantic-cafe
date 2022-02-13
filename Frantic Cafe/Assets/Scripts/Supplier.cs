@@ -5,7 +5,8 @@ using UnityEngine;
 enum ItemType
 {
     InstantToastMix,
-    Glass
+    Glass,
+    CoffeeGrounds
 }
 
 public class Supplier : Interactable
@@ -21,6 +22,8 @@ public class Supplier : Interactable
                 return "Instant Toast Mix Box";
             case ItemType.Glass:
                 return "Glass";
+            case ItemType.CoffeeGrounds:
+                return "Coffe Grounds";
             default:
                 return "hmm?";
         }
@@ -48,6 +51,9 @@ public class Supplier : Interactable
                 break;
             case ItemType.Glass:
                 PlayerInventory.Instance.ChangeHand(new Glass());
+                break;
+            case ItemType.CoffeeGrounds:
+                PlayerInventory.Instance.ChangeHand(new CoffeeGrounds());
                 break;
         }
     }

@@ -7,7 +7,9 @@ public enum Items
     ToastWithStrawberryJam,
     ToastWithPeanutAndStrawberryJam,
     Glass,
-    GlassOfWater
+    GlassOfWater,
+    CoffeeGrounds,
+    GlassOfCoffee
 }
 
 public abstract class Item
@@ -71,4 +73,18 @@ public class GlassOfWater : Item
     public override Items GetId() { return Items.GlassOfWater; }
     public override string GetName() { return "Glass Of Water"; }
     public override string GetResourceName() { return "glassofwater"; }
+}
+
+public class CoffeeGrounds : Item
+{
+    public override Items GetId() { return Items.CoffeeGrounds; }
+    public override string GetName() { return "Coffee Grounds"; }
+    public override string GetResourceName() { return "coffeegrounds"; }
+}
+
+public class GlassOfCoffee : Item
+{
+    public override Items GetId() { return Items.GlassOfCoffee; }
+    public override string GetName() { return "Glass Of Coffee"; }
+    public override string GetResourceName() { return "glassofcoffee"; }
 }
