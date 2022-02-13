@@ -1,9 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Grill : Interactable
 {
+    public int cookTime = 15;
+
     Item item;
     SpriteRenderer spriteRenderer;
 
@@ -56,7 +57,7 @@ public class Grill : Interactable
 
     IEnumerator GrillThings()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(cookTime);
 
         if (item == null) yield break;
 
