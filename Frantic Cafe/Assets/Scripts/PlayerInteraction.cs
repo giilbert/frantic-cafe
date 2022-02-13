@@ -61,7 +61,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void HandleInteraction(Interactable interactable)
     {
-        blipSound.Play();
         interactable.Interact();
+        blipSound.Play();
     }
 }
