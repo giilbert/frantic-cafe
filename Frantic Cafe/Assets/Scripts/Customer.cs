@@ -135,6 +135,7 @@ public class Customer : Interactable
         if (handItem.GetId() == currentOrder.GetId())
         {
             ToastMessage.Instance.Display(customerName + ": Thank you!");
+            GiveMoney();
             PlayerInventory.Instance.ChangeHand(null);
 
             currentOrder = null;
@@ -205,6 +206,15 @@ public class Customer : Interactable
     void UpdateTimer()
     {
         timer.fillAmount = timeLeft / patience;
+    }
+
+    void GiveMoney()
+    {
+        float timeTip = Mathf.Min(timeLeft - 60, 0) / 100f;
+        float randomTip = Random.value * 4;
+        float price = 4.0f;
+
+        MoneyScore.Instance.IncreaseScore(timeTip + randomTip + price);
     }
 }
 

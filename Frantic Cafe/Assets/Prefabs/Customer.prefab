@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08bf01b90d7e336439a39d14232ff682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patience: 120
+  patience: 180
   eatingCooldown: 30
   bubble: {fileID: 4745148136023870388}
   thoughtSpriteRenderer: {fileID: 4745148135915468112}

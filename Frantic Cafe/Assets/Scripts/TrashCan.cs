@@ -25,5 +25,6 @@ public class TrashCan : Interactable
         if (itemInHand == null) return;
 
         PlayerInventory.Instance.ChangeHand(null);
+        MoneyScore.Instance.IncreaseScore(-3f);
     }
 }

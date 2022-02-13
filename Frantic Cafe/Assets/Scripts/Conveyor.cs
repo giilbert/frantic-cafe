@@ -11,7 +11,6 @@ public class Conveyor : MonoBehaviour
     {
         foreach (Collider2D c in colliders)
         {
-            Debug.Log(c);
             c.attachedRigidbody.AddRelativeForce(direction * Time.deltaTime * 100);
         }
     }

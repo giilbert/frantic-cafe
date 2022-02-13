@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
-    Renderer spriteRenderer;
+    SpriteRenderer spriteRenderer;
 
     Vector2 velocity;
 
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if (velocity.x != 0)
-            spriteRenderer.transform.localScale = new Vector3(Mathf.RoundToInt(velocity.x), 1, 1);
+            spriteRenderer.flipX = velocity.x < 0;
 
         rb.MovePosition(rb.position + velocity.normalized * Time.deltaTime * moveSpeed);
     }
