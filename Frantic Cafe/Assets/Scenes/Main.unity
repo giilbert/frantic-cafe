@@ -9372,6 +9372,7 @@ GameObject:
   - component: {fileID: 1311921996}
   - component: {fileID: 1311921993}
   - component: {fileID: 1311921995}
+  - component: {fileID: 1311921997}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -9391,7 +9392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabb6bffaa7776f478db8724f199708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 8
 --- !u!212 &1311921991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9433,8 +9434,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.2783019, b: 0.2783019, a: 1}
+  m_Sprite: {fileID: -1481501174271704979, guid: 9e6acbd890d289447ba4e503c9f78f06, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9510,18 +9511,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.046663284}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.6666667, y: 1.3333334}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.66, y: 1.2215805}
   m_EdgeRadius: 0
 --- !u!114 &1311921996
 MonoBehaviour:
@@ -9536,6 +9537,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDisplay: {fileID: 1853333582}
+--- !u!95 &1311921997
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311921989}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 091c0622481d91042b4f97bf6977faad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1316047834
 PrefabInstance:
   m_ObjectHideFlags: 0
